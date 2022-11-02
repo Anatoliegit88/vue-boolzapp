@@ -1,0 +1,28 @@
+/* RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* BACKGROUND */
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.b-top {
+  height: 20vh;
+  background-color: darkcyan;
+}
+.b-bottom {
+  height: 80vh;
+  background-color: burlywood;
+}
+#app {
+  background-color: azure;
+  position: absolute;
+  top: 60px;
+  left: 120px;
+  width: 80%;
+  height: 500px;
+}
