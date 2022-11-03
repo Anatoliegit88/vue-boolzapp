@@ -4,6 +4,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+img {
+  width: 35px;
+  border-radius: 50%;
+}
 /* BACKGROUND */
 .container {
   position: relative;
@@ -18,11 +22,76 @@
   height: 80vh;
   background-color: burlywood;
 }
+/* SOCIAL-BACKGROUND  */
 #app {
   background-color: azure;
   position: absolute;
-  top: 60px;
+  top: 40px;
   left: 120px;
   width: 80%;
-  height: 500px;
+  height: 550px;
+  display: flex;
+}
+/* LEFT-SIDE */
+.left-side {
+  height: 90vh;
+  width: 35vw;
+  /* border: 1px solid; */
+}
+
+.first-avatar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 22.5rem;
+  height: 3rem;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  padding: 0.35rem;
+  padding-right: 1rem;
+}
+.fa-solid {
+  color: darkgray;
+  padding: 4px;
+}
+.first-icon {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  padding: 0.55rem;
+  padding-left: 0.4rem;
+}
+.second-avatar {
+  display: flex;
+  align-items: center;
+  background-color: lightskyblue;
+  padding-left: 1.3rem;
+  height: 3.43rem;
+}
+.pd-bottom {
+  text-align: center;
+  align-items: center;
+  display: flex;
+  padding: 0.55rem;
+  padding-left: 1.3rem;
+}
+.avatar {
+  width: 22.5rem;
+  height: 3.43rem;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+}
+.last-avatar {
+  width: 22.5rem;
+  height: 3.95rem;
+  background-color: white;
+}
+
+/* RIGHT-SIDE */
+.right-side {
+  object-fit: cover;
+  background-image: url(img/mine.jpg);
+  height: 90.3vh;
+  width: 65vw;
+  /* border: 1px solid; */
 }
