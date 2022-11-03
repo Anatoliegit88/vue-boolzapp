@@ -12,7 +12,7 @@
       referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.0.3/build/global/luxon.min.js"></script>
     <title>Boolzapp</title>
   </head>
   <body>
@@ -36,53 +36,56 @@
         <div>
           <div class=" second-avatar">
             <img src="" i class="fa-solid fa-bell-slash"></i>
+            <small class="small-font">Ricevi nottifiche dei novi messagi,<br>
+            Attiva nottifiche desktop.</small>
+          </div>
+        </div>
+        <div class="contacts-list">
+        </div>
+        <div class="contact" v-for="contact in contacts">
+          <div class="contact__image">
+            <img class="avatar" :src="`img/avatar${contact.avatar}.jpg`" alt="" />
             <p>Sofia</p>
           </div>
         </div>
         <div class="avatar">
-          <div class="pd-bottom">
-            <img src="img/avatar_1.jpg" alt="" />
-            <p>Sofia</p>
-          </div>
-        </div>
-        <div class="avatar">
-          <div class="pd-bottom">
+          <div class="contact">
             <img src="img/avatar_2.jpg" alt="" />
             <p>Sofia</p>
           </div>
         </div>
         <div class="avatar">
-          <div class="pd-bottom">
+          <div class="contact">
             <img src="img/avatar_3.jpg" alt="" />
             <p>Sofia</p>
           </div>
         </div>
         <div class="avatar">
-          <div class="pd-bottom">
+          <div class="contact">
             <img src="img/avatar_4.jpg" alt="" />
             <p>Sofia</p>
           </div>
         </div>
         <div class="avatar">
-          <div class="pd-bottom">
+          <div class="contact">
             <img src="img/avatar_5.jpg" alt="" />
             <p>Sofia</p>
           </div>
         </div>
         <div class="avatar">
-          <div class="pd-bottom">
+          <div class="contact">
             <img src="img/avatar_6.jpg" alt="" />
             <p>Sofia</p>
           </div>
         </div>
         <div class="avatar">
-          <div class="pd-bottom">
+          <div class="contact">
             <img src="img/avatar_7.jpg" alt="" />
             <p>Sofia</p>
           </div>
         </div>
         <div class="last-avatar">
-          <div class="pd-bottom">
+          <div class="contact">
             <img src="img/avatar_8.jpg" alt="" />
             <p>Sofia</p>
           </div>
