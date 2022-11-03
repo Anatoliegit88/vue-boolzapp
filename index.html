@@ -45,9 +45,18 @@
         <div class="contact" v-for="contact in contacts">
           <div class="contact__image">
             <img class="avatar" :src="`img/avatar${contact.avatar}.jpg`" alt="" />
-            <p>Sofia</p>
+           
           </div>
-        </div>
+          <div class="contact__text">
+            <div class="contact__user">
+              <h4>{{ contact.name }}</h4>
+              <small><p>Ultimo messaggio inviato</p></small>
+            </div>
+            <div class="contact__time">
+              <small>12:00</small>
+            </div>
+          </div>
+        <!-- </div>
         <div class="avatar">
           <div class="contact">
             <img src="img/avatar_2.jpg" alt="" />
@@ -88,11 +97,47 @@
           <div class="contact">
             <img src="img/avatar_8.jpg" alt="" />
             <p>Sofia</p>
-          </div>
+          </div> -->
         </div>
       </div>
-      <div class="right-side"></div>
-    </div>
+      <!-- RIGHT-SIDE -->
+      <div class="right-side"> 
+        <div class="first-avatar-rs">
+          <div class="first-icon">
+            <img src="img/avatar_1.jpg" alt="" />
+            <h4>Michele</h4>
+            <!-- <div class="txt">
+              <small><p>Ultimo accesso oggi alle <span>12:00</span></p></small>
+            </div> -->
+            
+          </div>
+              <span>
+                <i class="fa-solid fa-magnifying-glass"></i>
+               <i class="fa-solid fa-paperclip"></i>
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+              </span>
+         </div>
+         <div class="messages-received">
+           <div class="first-message">
+            <h5>Hai portato a spasso il cane?</h5>
+           </div>
+           <div class="first-message">
+             <h5>Ricordati di stendere i panni</h5>
+           </div>
+          </div>
+          <div class="messages-send">
+            <div class="second-message">
+              <h5>Tutto fatto</h5>
+            </div>
+          </div>
+          <div class="footer">
+            <div class="type-message">
+              <i class="fa-regular fa-face-smile"></i>
+              <input class="input" type="text" placeholder="Inserisci messagio">
+              <i class="fa-solid fa-microphone"></i>
+            </div>
+          </div>
+         </div>
     <script src="data.js"></script>
   </body>
 </html>

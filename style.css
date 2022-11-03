@@ -6,9 +6,14 @@
 }
 html {
   font-family: "Lato", sans-serif;
+  font-size: 100%;
 }
 img {
+  max-width: 100%;
+}
+img.avatar {
   width: 35px;
+  height: 35px;
   border-radius: 50%;
 }
 /* BACKGROUND */
@@ -27,7 +32,7 @@ img {
 }
 /* SOCIAL-BACKGROUND  */
 #app {
-  background-color: azure;
+  background-color: rgb(54, 214, 214);
   position: absolute;
   top: 40px;
   left: 120px;
@@ -52,6 +57,7 @@ img {
   padding: 0.35rem;
   padding-right: 1rem;
 }
+
 .fa-solid {
   color: darkgray;
   padding: 4px;
@@ -64,11 +70,13 @@ img {
   color: lightskyblue;
 } */
 .first-icon {
-  text-align: center;
+  text-align: start;
   align-items: center;
   display: flex;
   padding: 0.55rem;
   padding-left: 0.4rem;
+  width: 40px;
+  border-radius: 50%;
 }
 .second-avatar {
   display: flex;
@@ -80,27 +88,34 @@ img {
 .small-font {
   font-size: xx-small;
 }
+/* CONTACT-LIST */
 .contacts-list {
   overflow-y: scroll;
 }
 .contact {
-  text-align: center;
   align-items: center;
   display: flex;
   padding: 0.55rem;
   padding-left: 1.3rem;
-}
-.avatar {
+  flex-grow: 1;
   width: 22.5rem;
-  height: 3.43rem;
+  height: 3.5rem;
   background-color: white;
   border-bottom: 1px solid lightgrey;
 }
-.last-avatar {
+.contacts-time {
+  display: block;
+  justify-content: right;
+}
+/* .contact {
+} */
+/* .last-contact {
   width: 22.5rem;
   height: 3.95rem;
   background-color: white;
-}
+  padding-bottom: 1rem;
+} */
+/* /CONTACT-LIST */
 
 /* RIGHT-SIDE */
 .right-side {
@@ -108,5 +123,74 @@ img {
   background-image: url(img/mine.jpg);
   height: 90.3vh;
   width: 65vw;
-  /* border: 1px solid; */
+  position: relative;
 }
+.first-avatar-rs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 41.5rem;
+  height: 3rem;
+  background-color: white;
+  border-bottom: 1px solid lightgrey;
+  padding: 0.35rem;
+  padding-right: 1rem;
+}
+/* MESSAGES */
+.first-message {
+  display: flex;
+  background-color: #d5f9ba;
+  min-width: 250px;
+  max-width: 60%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  height: 60px;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+.second-message {
+  display: flex;
+  background-color: white;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  height: 60px;
+  min-width: 250px;
+  max-width: 60%;
+  align-items: center;
+  padding-left: 1.5rem;
+}
+.messages-received {
+  padding-left: 20rem;
+}
+.messages-send {
+  padding-left: 5rem;
+}
+/* /MESSAGES */
+/* FOOTER */
+.footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #e2e2e2;
+  height: 55px;
+  width: 100%;
+  color: 
+  align-items: center;
+}
+.type-message {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  align-items: center;
+}
+.input {
+  width: 80%;
+  background-color: white;
+  border-radius: 5px;
+  min-height: 30px;
+  font-size: x-small;
+  padding-left: 10px;
+ border: none;
+}
+/* FOOTER */
