@@ -42,7 +42,8 @@
         </div>
         <div class="contacts-list">
         </div>
-        <div class="contact" v-for="contact in contacts">
+        <div class="contact" v-for="(contact, index) in contacts" @click="setActiveContact(index)"
+        v-for="message in contacts[activeContact].message">
           <div class="contact__image">
             <img class="avatar" :src="`img/avatar${contact.avatar}.jpg`" alt="" />
            
@@ -105,7 +106,7 @@
         <div class="first-avatar-rs">
           <div class="first-icon">
             <img src="img/avatar_1.jpg" alt="" />
-            <h4>Michele</h4>
+            <h4>{{contacts.[activeContact].name}} </h4>
             <!-- <div class="txt">
               <small><p>Ultimo accesso oggi alle <span>12:00</span></p></small>
             </div> -->
@@ -117,9 +118,10 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </span>
          </div>
-         <div class="messages-received">
-           <div class="first-message">
-            <h5>Hai portato a spasso il cane?</h5>
+         </div>
+         <div v-for="message in contacts[activeContact].messages" class="messages-received">
+           <div class="messages--{{message.status}}" class="first-message">
+            <h5>{{message.message}}</h5>
            </div>
            <div class="first-message">
              <h5>Ricordati di stendere i panni</h5>

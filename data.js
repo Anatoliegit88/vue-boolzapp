@@ -1,6 +1,6 @@
 const { createApp } = Vue;
 const dt = luxon.DateTime;
-
+const activeContact = 0;
 createApp({
   data() {
     return {
@@ -170,6 +170,12 @@ createApp({
       ],
     };
   },
+  methods: {
+    setActiveContact(index) {
+      this.activeContact = index;
+      this.contacts[activeContact].message;
+    },
+  },
   created() {
     const now = dt
       .now()
@@ -178,3 +184,6 @@ createApp({
     console.log(now);
   },
 }).mount("#app");
+// Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
+// messaggi relativi al contatto attivo all’interno del pannello della conversazione
+//  Click sul contatto mostra la conversazione del contatto cliccato
