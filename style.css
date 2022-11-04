@@ -137,7 +137,8 @@ img.avatar {
   padding-right: 1rem;
 }
 /* MESSAGES */
-.first-message {
+.sent {
+  position: relative;
   display: flex;
   background-color: #d5f9ba;
   min-width: 250px;
@@ -149,7 +150,9 @@ img.avatar {
   align-items: center;
   padding-left: 1.5rem;
 }
-.second-message {
+.received {
+  padding-left: 5rem;
+  position: relative;
   display: flex;
   background-color: white;
   padding: 0.5rem;
@@ -162,23 +165,22 @@ img.avatar {
   padding-left: 1.5rem;
 }
 .messages-received {
-  padding-left: 20rem;
+  padding-left: 23rem;
 }
-.messages-send {
-  padding-left: 5rem;
+.message-send {
+  padding-left: 3rem;
 }
 /* /MESSAGES */
 /* FOOTER */
-.footer {
-  position: absolute;
-  bottom: 0;
+.add-sms {
   background-color: #e2e2e2;
   height: 55px;
   width: 100%;
-  color: 
   align-items: center;
+  bottom: 0;
+  position: absolute;
 }
-.type-message {
+.type-sms {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
@@ -191,6 +193,14 @@ img.avatar {
   min-height: 30px;
   font-size: x-small;
   padding-left: 10px;
- border: none;
+  border: none;
+}
+.contact__time,
+.message__time {
+  font-size: xx-small;
+  color: darkgray;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }
 /* FOOTER */

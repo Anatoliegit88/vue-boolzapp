@@ -50,11 +50,11 @@
           </div>
           <div class="contact__text">
             <div class="contact__user">
-              <h4>{{ contact.name }}</h4>
+              <h5>{{ contact.name }}</h5>
               <small><p>Ultimo messaggio inviato</p></small>
             </div>
             <div class="contact__time">
-              <small>12:00</small>
+              <small> {{contact.date}} </small>
             </div>
           </div>
         <!-- </div>
@@ -106,7 +106,7 @@
         <div class="first-avatar-rs">
           <div class="first-icon">
             <img src="img/avatar_1.jpg" alt="" />
-            <h4>{{contacts.[activeContact].name}} </h4>
+            <h4>{{contacts[activeContact].name}} </h4>
             <!-- <div class="txt">
               <small><p>Ultimo accesso oggi alle <span>12:00</span></p></small>
             </div> -->
@@ -118,28 +118,26 @@
                 <i class="fa-solid fa-ellipsis-vertical"></i>
               </span>
          </div>
-         </div>
-         <div v-for="message in contacts[activeContact].messages" class="messages-received">
-           <div class="messages--{{message.status}}" class="first-message">
-            <h5>{{message.message}}</h5>
-           </div>
-           <div class="first-message">
-             <h5>Ricordati di stendere i panni</h5>
-           </div>
+         <div v-for="message in contacts[activeContact].messages" :class="message.status ==='sent'? 'message-send' : 'messages-received' ">
+           <div :class="message.status">
+             <h5>{{message.message}}</h5>
+             <div class="message__time">
+              <small>{{message.date}}</small>
+            </div>
+            </div>
+           
+          
+          
           </div>
-          <div class="messages-send">
-            <div class="second-message">
-              <h5>Tutto fatto</h5>
+          <div class="add-sms">
+            <div class="type-sms">
+             <span><i class="fa-regular fa-face-smile"></i></span> 
+              <input class="input" type="text" v-model.trim="newMessage" @keyup.enter="addNewMessage" placeholder="Inserisci messagio">
+              <span><i class="fa-solid fa-microphone"></i></span>
             </div>
           </div>
-          <div class="footer">
-            <div class="type-message">
-              <i class="fa-regular fa-face-smile"></i>
-              <input class="input" type="text" placeholder="Inserisci messagio">
-              <i class="fa-solid fa-microphone"></i>
-            </div>
-          </div>
-         </div>
-    <script src="data.js"></script>
-  </body>
+        </div>
+      </div>
+        <script src="data.js"></script>
+      </body>
 </html>

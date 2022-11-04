@@ -4,6 +4,7 @@ const activeContact = 0;
 createApp({
   data() {
     return {
+      newMessage: "",
       activeContact: 0,
       contacts: [
         {
@@ -175,13 +176,34 @@ createApp({
       this.activeContact = index;
       this.contacts[activeContact].message;
     },
+    addNewMessage() {
+      const activeContactEmpty = this.activeContact;
+      if (this.newMessage !== "") {
+        const arrayMessages = this.contacts[this.activeContact].messages;
+        const newMessageInsert = {
+          date: this.generateDateTime(),
+          message: this.newMessage,
+          status: "sent",
+        };
+        arrayMessages.push(newMessageInsert);
+        this.newMessage = "";
+        setTimeout(() => {
+          const newMessageInsert = {
+            date: this.generateDateTime(),
+            message: "ok",
+            status: "received",
+          };
+          this.contacts[activeContactEmpty].messages.push(newMessageInsert);
+        }, 1000);
+      }
+    },
   },
+
   created() {
-    const now = dt
+    return dt
       .now()
       .setLocale("it")
       .toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
-    console.log(now);
   },
 }).mount("#app");
 // Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
