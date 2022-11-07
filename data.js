@@ -179,7 +179,10 @@ createApp({
     addNewMessage() {
       const activeContactEmpty = this.activeContact;
       if (this.newMessage !== "") {
-        const arrayMessages = this.contacts[this.activeContact].messages;
+        const arrayMessages =
+          this.contacts[this.activeContact].messages.push[
+            this.addNewMessage.messages
+          ];
         const newMessageInsert = {
           date: this.generateDateTime(),
           message: this.newMessage,
@@ -199,7 +202,7 @@ createApp({
     },
   },
 
-  created() {
+  generateDateTime() {
     return dt
       .now()
       .setLocale("it")

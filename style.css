@@ -21,6 +21,7 @@ img.avatar {
   position: relative;
   width: 100vw;
   height: 100vh;
+  cursor: pointer;
 }
 .b-top {
   height: 20vh;
@@ -44,6 +45,7 @@ img.avatar {
 .left-side {
   height: 90vh;
   width: 35vw;
+  cursor: pointer;
 }
 
 .first-avatar {
@@ -91,6 +93,7 @@ img.avatar {
 /* CONTACT-LIST */
 .contacts-list {
   overflow-y: scroll;
+  cursor: pointer;
 }
 .contact {
   align-items: center;
